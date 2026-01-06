@@ -3,8 +3,8 @@ resource "azurerm_windows_virtual_machine" "main" {
 name = "${var.prefix}-vm"
 admin_username = "azureuser"
 admin_password = random_password.password.result
-location = azurerm_resource_group.rg.location
-resource_group_name = azurerm_resource_group.rg.name
+location = var.location
+resource_group_name = var.resource_group_name
 network_interface_ids = [azurerm_network_interface.nic.id]
 size = "Standard_DS1_v2"
 
