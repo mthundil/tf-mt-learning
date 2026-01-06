@@ -1,3 +1,4 @@
+# this will create a Windows VM
 resource "azurerm_windows_virtual_machine" "main" {
 name = "${var.prefix}-vm"
 admin_username = "azureuser"
